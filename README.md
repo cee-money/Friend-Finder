@@ -16,18 +16,31 @@ The apiRoutes.js file contains two routes:
 The app's data is saved in app/data/friends.js as an array of objects. Each of these objects follows the format below:
 
 {
+
   "name":"Joe",
+  
   "photo":"https://photo.jpg",
+  
   "scores":[
+  
       5,
+      
       1,
+      
       4,
+      
       4,
+      
       5,
+      
       1,
+      
       2,
+      
       5,
+      
       4,
+      
       1
     ]
 }
