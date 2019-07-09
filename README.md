@@ -24,6 +24,7 @@ The app's data is saved in app/data/friends.js as an array of objects. Each of t
   "photo":"https://photo.jpg",
   
   "scores": [ 5, 1, 4, 4, 5, 1, 2, 5, 4, 1 ]
+  
 }
 
 
