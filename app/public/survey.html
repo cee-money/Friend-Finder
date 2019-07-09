@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootswatch CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-uhut8PejFZO8994oEgm/ZfAv0mW1/b83nczZzSwElbeILxwkN491YQXsCFTE6+nx" crossorigin="anonymous">
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/fd64f95310.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>FriendFinder - Survey</title>
+</head>
+<body>
+
+<br>
+<br>
+<!-- Survery "header" -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron border border-secondary">
+                <h2 class="display-2"><i class="fa fa-user-friends"></i>&nbsp;<strong>FriendFinder</strong></h2>
+                <hr>
+                <h2 class="display-4"><strong>&nbsp;&nbsp;&nbsp;The Survey</strong></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Survey form -->
+<div class="container bg-light">
+    <div class="row border border-secondary">
+        <div class="col-12">
+            <br>
+            <h3><i class="fas fa-address-card"></i>&nbsp;<strong>About You</strong></h3>
+            <form>
+                <div class="form-group">
+                      <label for="name">Name (required)</label>
+                      <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Link to Photo (required)</label>
+                    <input type="text" class="form-control" id="photo" required>
+                </div>
+                <hr>
+                <h3><i class="fas fa-question-circle"></i>&nbsp;<strong>Questions</strong></h3>
+                <small>Select from each dropdown menu:</small>
+                <br>
+                <small>1 - Strongly Disagree &nbsp;|&nbsp; 2 - Disagree &nbsp;|&nbsp; 3 - Neutral &nbsp;|&nbsp; 4- Agree &nbsp;|&nbsp; 5 - Strongly Agree</small>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="q1">1) Your mind is always buzzing with unexplored ideas and plans.</label>
+                    <select class="form-control form-group col-md-3" id="q1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q2">2) Generally speaking, you rely more on your experience than your imagination.</label>
+                    <select class="form-control form-group col-md-3" id="q2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q3">3) You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                    <select class="form-control form-group col-md-3" id="q3">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q4">4) You rarely do something just out of sheer curiosity.</label>
+                    <select class="form-control form-group col-md-3" id="q4">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q5">5) People can rarely upset you.</label>
+                    <select class="form-control form-group col-md-3" id="q5">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q6">6) It is often difficult for you to relate to other people’s feelings.</label>
+                    <select class="form-control form-group col-md-3" id="q6">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q7">7) In a discussion, truth should be more important than people’s sensitivities.</label>
+                    <select class="form-control form-group col-md-3" id="q7">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q8">8) You rarely get carried away by fantasies and ideas.</label>
+                    <select class="form-control form-group col-md-3" id="q8">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q9">9) You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                    <select class="form-control form-group col-md-3" id="q9">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q10">10) You feel more energetic after spending time with a group of people.</label>
+                    <select class="form-control form-group col-md-3" id="q10">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-secondary" id="submit">Submit</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!-- Nav bar "footer" -->
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <nav>  
+                <a href="/api/friends" id="friends">API Friends List &nbsp&nbsp</a> |
+                <a href="https://github.com/cee-money/Friend-Finder" target="_blank">&nbsp&nbspGitHub Repo</a>
+            </nav>
+        </div>
+    </div>
+</div>
+<br>
+
+<script type="text/javascript">
+
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+      };
+
+      $.post("/api/friends", newFriend)
+        .then(function(data) {
+          console.log("added friend", data);
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "This full-stack site takes in results from users' surveys, then compares their answers with those from other users. The app displays the name and picture of the user with the best overall match to the current user. It is a compatibility-based \"FriendFinder\" application similar to a dating app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cee-money/Friend-Finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cee-money/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/cee-money/Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^12.6.0",
+    "path": "^0.12.7"
+  }
+}
