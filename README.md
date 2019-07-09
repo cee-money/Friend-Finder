@@ -39,9 +39,9 @@ Each user's results are converted into a simple array of numbers (ex: [5, 1, 4, 
 Once the site finds the current user's most compatible friend, it displays the result as a modal pop-up containing the name and picture of the closest match.
 
 New Technologies used:
-*Nodemon
-*Express
-*Heroku 
+* Nodemon
+* Express
+* Heroku 
 
 
 
