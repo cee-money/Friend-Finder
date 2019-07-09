@@ -52,7 +52,7 @@
                 <br>
                 <div class="form-group">
                     <label for="q1">1) Your mind is always buzzing with unexplored ideas and plans.</label>
-                    <select class="form-control form-group col-md-3" id="q1">
+                    <select class="form-control form-group col-md-3 questions" id="q1">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q2">2) Generally speaking, you rely more on your experience than your imagination.</label>
-                    <select class="form-control form-group col-md-3" id="q2">
+                    <select class="form-control form-group col-md-3 questions" id="q2">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q3">3) You find it easy to stay relaxed and focused even when there is some pressure.</label>
-                    <select class="form-control form-group col-md-3" id="q3">
+                    <select class="form-control form-group col-md-3 questions" id="q3">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q4">4) You rarely do something just out of sheer curiosity.</label>
-                    <select class="form-control form-group col-md-3" id="q4">
+                    <select class="form-control form-group col-md-3 questions" id="q4">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -92,7 +92,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q5">5) People can rarely upset you.</label>
-                    <select class="form-control form-group col-md-3" id="q5">
+                    <select class="form-control form-group col-md-3 questions" id="q5">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q6">6) It is often difficult for you to relate to other people’s feelings.</label>
-                    <select class="form-control form-group col-md-3" id="q6">
+                    <select class="form-control form-group col-md-3 questions" id="q6">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q7">7) In a discussion, truth should be more important than people’s sensitivities.</label>
-                    <select class="form-control form-group col-md-3" id="q7">
+                    <select class="form-control form-group col-md-3 questions" id="q7">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -122,7 +122,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q8">8) You rarely get carried away by fantasies and ideas.</label>
-                    <select class="form-control form-group col-md-3" id="q8">
+                    <select class="form-control form-group col-md-3 questions" id="q8">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q9">9) You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
-                    <select class="form-control form-group col-md-3" id="q9">
+                    <select class="form-control form-group col-md-3 questions" id="q9">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -142,7 +142,7 @@
                 </div>
                 <div class="form-group">
                     <label for="q10">10) You feel more energetic after spending time with a group of people.</label>
-                    <select class="form-control form-group col-md-3" id="q10">
+                    <select class="form-control form-group col-md-3 questions" id="q10">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -179,8 +179,14 @@
       var newFriend = {
         name: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
-        scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+        scores: [$("#q1 :selected").val(), $("#q2 :selected").val(), $("#q3 :selected").val(), $("#q4 :selected").val(), $("#q5 :selected").val(), $("#q6 :selected").val(), $("#q7 :selected").val(), $("#q8 :selected").val(), $("#q9 :selected").val(), $("#q10 :selected").val()]
       };
+      $("#name").val("");
+      $("#photo").val("");
+      $("#q1 option:eq(0)").prop("selected", true);
+      $("#q2 option:eq(0)").prop("selected", true);
+      alert("Thank you for submitting your survey!");
+
 
       $.post("/api/friends", newFriend)
         .then(function(data) {
