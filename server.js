@@ -28,7 +28,7 @@ app.get("/survey", function(req, res) {
     res.sendFile(path.join(__dirname, "app/public/survey.html"));
 });
   
-  // Displays all friends
+// Displays all friends
 app.get("/api/friends", function(req, res) {
     return res.json(friends);
 });
@@ -36,13 +36,66 @@ app.get("/api/friends", function(req, res) {
 app.post("/api/friends", function(req, res) {
 
     var newFriend = req.body;
+
+    var scores = newFriend.scores.map(Number);
+
+    newFriend.scores = scores;
   
     console.log(newFriend);
   
     friends.push(newFriend);
   
     res.json(newFriend); 
-  });
+});
+
+app.get("/api/match/:name", function(req, res) {
+
+var currentUser = req.params.name;
+
+var currentUserScores = [];
+
+// get current user's scores array
+for (var i = 0; i < friends.length; i++) {
+  if (currentUser === friends[i].name) {
+    currentUserScores = friends[i].scores;
+  }
+}
+
+
+var smallestDiffTracker = {
+    smallestDiffUserIndex: undefined,
+    smallestDiff: undefined
+};
+
+var differences = [];
+
+// compare current user's scores array against all other users' scores arrays
+for (var i = 0; i < friends.length; i++){
+
+    if (!(currentUser === friends[i].name)) {
+        var compareScores = friends[i].scores;
+
+        for (var j = 0; j < currentUserScores.length; j++) {
+
+            differences.push(Math.abs(currentUserScores[j] - compareScores[j]));
+        }
+        var currentDiff = differences.reduce(function(total, num){
+            return total + num;
+        });
+
+        if (smallestDiffTracker.smallestDiff === undefined || (currentDiff < smallestDiffTracker.smallestDiff)) {
+
+            smallestDiffTracker.smallestDiffUserIndex = i;
+            smallestDiffTracker.smallestDiff = currentDiff;
+
+        } 
+    } 
+}
+
+res.json(friends[smallestDiffTracker.smallestDiffUserIndex])
+    
+});
+
 
 
 // Starts the server to begin listening

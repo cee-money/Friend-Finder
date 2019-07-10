@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootswatch CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-uhut8PejFZO8994oEgm/ZfAv0mW1/b83nczZzSwElbeILxwkN491YQXsCFTE6+nx" crossorigin="anonymous">
-    <!-- Font Awesome link -->
-    <script src="https://kit.fontawesome.com/fd64f95310.js"></script>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Additional Bootstrap Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/fd64f95310.js"></script>
+    
     <title>FriendFinder - Survey</title>
 </head>
 <body>
@@ -27,6 +31,37 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Launch demo modal</button> -->
+      
+        <!-- Modal -->
+            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="title" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title" id="title">Your Compatible Friend Match Is:</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body mx-auto">
+                        <h5 id="match-message"></h5>
+                        <img id="match-photo" src="#" alt="Your Match Photo" class="img-thumbnail">
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Survey form -->
 <div class="container bg-light">
@@ -53,7 +88,7 @@
                 <div class="form-group">
                     <label for="q1">1) Your mind is always buzzing with unexplored ideas and plans.</label>
                     <select class="form-control form-group col-md-3 questions" id="q1">
-                        <option>1</option>
+                        <option value="1">1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -63,7 +98,7 @@
                 <div class="form-group">
                     <label for="q2">2) Generally speaking, you rely more on your experience than your imagination.</label>
                     <select class="form-control form-group col-md-3 questions" id="q2">
-                        <option>1</option>
+                        <option value="1">1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -73,81 +108,81 @@
                 <div class="form-group">
                     <label for="q3">3) You find it easy to stay relaxed and focused even when there is some pressure.</label>
                     <select class="form-control form-group col-md-3 questions" id="q3">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="q4">4) You rarely do something just out of sheer curiosity.</label>
                     <select class="form-control form-group col-md-3 questions" id="q4">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="q5">5) People can rarely upset you.</label>
                     <select class="form-control form-group col-md-3 questions" id="q5">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="q6">6) It is often difficult for you to relate to other people’s feelings.</label>
                     <select class="form-control form-group col-md-3 questions" id="q6">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="q7">7) In a discussion, truth should be more important than people’s sensitivities.</label>
                     <select class="form-control form-group col-md-3 questions" id="q7">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="q8">8) You rarely get carried away by fantasies and ideas.</label>
                     <select class="form-control form-group col-md-3 questions" id="q8">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="q9">9) You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
                     <select class="form-control form-group col-md-3 questions" id="q9">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="q10">10) You feel more energetic after spending time with a group of people.</label>
                     <select class="form-control form-group col-md-3 questions" id="q10">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
 
@@ -175,22 +210,37 @@
 <script type="text/javascript">
 
     $("#submit").on("click", function(event) {
-      event.preventDefault();
-      var newFriend = {
-        name: $("#name").val().trim(),
-        photo: $("#photo").val().trim(),
-        scores: [$("#q1 :selected").val(), $("#q2 :selected").val(), $("#q3 :selected").val(), $("#q4 :selected").val(), $("#q5 :selected").val(), $("#q6 :selected").val(), $("#q7 :selected").val(), $("#q8 :selected").val(), $("#q9 :selected").val(), $("#q10 :selected").val()]
-      };
-      $("#name").val("");
-      $("#photo").val("");
-      $("#q1 option:eq(0)").prop("selected", true);
-      $("#q2 option:eq(0)").prop("selected", true);
-      alert("Thank you for submitting your survey!");
+        event.preventDefault();
 
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [$("#q1 :selected").val(), $("#q2 :selected").val(), $("#q3 :selected").val(), $("#q4 :selected").val(), $("#q5 :selected").val(), $("#q6 :selected").val(), $("#q7 :selected").val(), $("#q8 :selected").val(), $("#q9 :selected").val(), $("#q10 :selected").val()]
+        };
 
-      $.post("/api/friends", newFriend)
-        .then(function(data) {
-          console.log("added friend", data);
+        alert("Thank you for submitting your survey!");
+
+        $("input").val("");
+        $("select").val("1");
+
+        $.post("/api/friends", newFriend)
+            .then(function(data) {
+            console.log("added friend", data);
+
+            $.get(`/api/match/${newFriend.name}`, function(data) {
+                console.log(data);
+
+                $("#modal").modal();
+
+                if (data) {
+                    $("#match-photo").attr("src", data.photo);
+                    $("#title").text("Your Compatible Friend Match Is: " + data.name);
+                    
+                } else {
+                    $("#match-message").text("There are currently no compatible friends.");
+                }
+            });
+
         });
     });
   </script>
