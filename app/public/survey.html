@@ -32,6 +32,7 @@
     </div>
 </div>
 
+
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -50,7 +51,7 @@
                         <img id="match-photo" src="#" alt="Your Match Photo" class="img-thumbnail">
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>
                     </div>
                 </div>
                 </div>
@@ -208,36 +209,44 @@
     $("#submit").on("click", function(event) {
         event.preventDefault();
 
-        var newFriend = {
+        if (!$("input").val() == "") {
+
+            $("input").removeClass("border border-danger");
+
+            var newFriend = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
             scores: [$("#q1 :selected").val(), $("#q2 :selected").val(), $("#q3 :selected").val(), $("#q4 :selected").val(), $("#q5 :selected").val(), $("#q6 :selected").val(), $("#q7 :selected").val(), $("#q8 :selected").val(), $("#q9 :selected").val(), $("#q10 :selected").val()]
-        };
+            
+            };
 
-        alert("Thank you for submitting your survey!");
+            alert("Thank you for submitting your survey!");
 
-        $("input").val("");
-        $("select").val("1");
+            $("input").val("");
+            $("select").val("1");
 
-        $.post("/api/friends", newFriend)
-            .then(function(data) {
-            console.log("added friend", data);
+            $.post("/api/friends", newFriend)
+                .then(function(data) {
+                console.log("added friend", data);
 
-            $.get(`/api/match/${newFriend.name}`, function(data) {
-                console.log(data);
+                $.get(`/api/match/${newFriend.name}`, function(data) {
+                    console.log(data);
 
-                $("#modal").modal();
+                    $("#modal").modal();
 
-                if (data) {
-                    $("#match-photo").attr("src", data.photo);
-                    $("#title").text("Your Compatible Friend Match Is: " + data.name);
-                    
-                } else {
-                    $("#match-message").text("There are currently no compatible friends.");
-                }
+                    if (data) {
+                        $("#match-photo").attr("src", data.photo);
+                        $("#title").text("Your Compatible Friend Match Is: " + data.name);
+                        
+                    } else {
+                        $("#match-message").text("There are currently no compatible friends.");
+                    }
+                });
             });
-
-        });
+        } else {
+            alert(`Please include both your name and a link to a photo.`);
+            $("input").addClass("border border-danger");
+        }
     });
   </script>
 </body>
