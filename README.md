@@ -1,5 +1,8 @@
 # Friend-Finder
 
+Link to deployed version: https://friend-finder-4467.herokuapp.com/
+
+
 This full-stack site takes in results from users' surveys, then compares their answers with those from other users. The app displays the name and picture of the user with the best overall match to the current user. It is a compatibility-based "FriendFinder" application similar to a dating app. 
 
 
