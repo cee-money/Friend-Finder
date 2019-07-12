@@ -18,6 +18,11 @@ var friends = [
         name: "Sam",
         photo: "https://www.girlmuseum.org/wp-content/uploads/2018/06/Molly-Ringwald-Sixteen-Candles-300x205.jpg",
         scores: [4, 2, 5, 3, 1, 3, 2, 1, 5, 4]
+    },
+    {
+        name: "Carolyn",
+        photo: "https://i-h1.pinimg.com/140x140_RS/1d/59/4c/1d594c82ca900d2d82510217c4bbecc1.jpg",
+        scores: [1, 2, 3, 3, 5, 3, 3, 3, 5, 1]
     }
 ];
 
